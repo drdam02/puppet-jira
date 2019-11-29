@@ -8,6 +8,7 @@ class jira::sso(
   Variant[Stdlib::HTTPUrl, Stdlib::HTTPSUrl] $application_login_url = $jira::application_login_url,
   Variant[Stdlib::HTTPUrl, Stdlib::HTTPSUrl] $crowd_server_url      = $jira::crowd_server_url,
   Variant[Stdlib::HTTPUrl, Stdlib::HTTPSUrl] $crowd_base_url        = $jira::crowd_base_url,
+  Boolean $enable_crowd_sso                                         = $jira::enable_crowd_sso,
   $session_isauthenticated                                          = $jira::session_isauthenticated,
   $session_tokenkey                                                 = $jira::session_tokenkey,
   $session_validationinterval                                       = $jira::session_validationinterval,

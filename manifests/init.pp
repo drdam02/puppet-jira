@@ -152,6 +152,7 @@ class jira (
   Variant[Stdlib::HTTPUrl, Stdlib::HTTPSUrl] $application_login_url = 'https://crowd.example.com/console/',
   Variant[Stdlib::HTTPUrl, Stdlib::HTTPSUrl] $crowd_server_url      = 'https://crowd.example.com/services/',
   Variant[Stdlib::HTTPUrl, Stdlib::HTTPSUrl] $crowd_base_url        = 'https://crowd.example.com/',
+  Boolean $enable_crowd_sso                                         = false,
   String $session_isauthenticated                                   = 'session.isauthenticated',
   String $session_tokenkey                                          = 'session.tokenkey',
   Integer $session_validationinterval                               = 5,
