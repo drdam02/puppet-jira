@@ -24,7 +24,8 @@ class jira::sso(
     notify  => Class['jira::service'],
   }
   file { "${jira::webappdir}/atlassian-jira/WEB-INF/classes/seraph-config.xml":
-    source  => 'puppet:///modules/jira/seraph-config_withSSO.xml',
+    ensure  => present,
+    content => template('jira/seraph-config_withSSO.xml.erb'),
     mode    => '0660',
     owner   => $jira::user,
     group   => $jira::group,
